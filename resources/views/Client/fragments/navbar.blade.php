@@ -16,8 +16,6 @@
 
             <a class="nav-link active "  href="/#contacto">CONTACTO</a>
 
-            <a class="dropdown-item" href="{{route ('admin')}}">Admin</a>
-
 
             {{-- cunado este el user logeado --}}
             @if (auth()->user() != null)

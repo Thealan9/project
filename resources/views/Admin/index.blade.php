@@ -18,7 +18,7 @@
                     </a>
                 </div>
                 <div class="col-6">
-                    <a href="#" class="btn btn-secondary d-flex align-items-center justify-content-center gap-2 w-100 py-3 rounded-pill"
+                    <a href="{{ route('servicios.index') }}" class="btn btn-secondary d-flex align-items-center justify-content-center gap-2 w-100 py-3 rounded-pill"
                     style="background-color: #D0C8C1;">
                         <i class="fas fa-tools"></i> REPARACIONES
                     </a>

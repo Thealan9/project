@@ -13,7 +13,10 @@
 </head>
 <body>
 
-    <a class="btn btn-success" type="button" href="{{ route('inventario.create') }}">AGREGAR PRODUCTO</a>
+    <div class="d-flex flex-row-reverse">
+        <a class="btn btn-success" type="button" href="{{ route('inventario.create') }}">AGREGAR PRODUCTO</a>
+      </div>
+
 
     <div class="container">
         <div class="row justify-content-center">
@@ -29,7 +32,7 @@
                                 <p class="card-text">$ {{ $p->unit_price }}</p>
                                 <p class="card-text">{{ $p->stock }} en stock</p>
                             </div>
-                            
+
 
                             @if (auth()->user() != null)
                             <div class="d-flex justify-content-around">

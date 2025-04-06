@@ -41,21 +41,27 @@ route::middleware(['auth'])->group(function(){
 
 
     Route::resource(('/suppliers'),App\Http\Controllers\SupplierController::class)->middleware('role:admin');
-   
+
 
     Route::get('/suppliers/{supplier}/delete',[App\Http\Controllers\SupplierController::class, 'delete'])->middleware('role:admin')
     -> name('suppliers.delete');
 
-    //COdigo ALAN DEL ADMIN 
+    //COdigo ALAN DEL ADMIN
 
     Route::resource(('/inventario'),App\Http\Controllers\AdminInventarioController::class)->middleware('role:admin');
     Route::get('/inventario/{product}/delete',[App\Http\Controllers\AdminInventarioController::class, 'delete'])->middleware('role:admin')
     -> name('inventario.delete');
 
+
+    Route::resource(('/servicios'),App\Http\Controllers\AdminReparacionesController::class)->middleware('role:admin');
+    Route::get('/servicios/{servicio}/delete',[App\Http\Controllers\AdminReparacionesController::class, 'delete'])->middleware('role:admin')
+    -> name('servicios.delete');
+
+
 });
 
 
-    
+
 
 
 
