@@ -4,7 +4,7 @@
 @section('sectionMain')
 
 {{-- @dump($errors->all()) --}}
-@dump($errors->all())
+
 <div class="container">
     <div class="row ">
             <h2 class="fw-bold text-center">EDICION DEL SERVICIO{{ $servicio->id }} </h2><br><br>

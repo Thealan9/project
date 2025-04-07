@@ -4,7 +4,7 @@
 @section('sectionMain')
 
 {{-- @dump($errors->all()) --}}
-@dump($errors->all())
+
 <div class="container">
     <div class="row ">
             <h2 class="fw-bold text-center">AÑADIR NUEVO PRODUCTO</h2><br><br>
@@ -65,7 +65,7 @@
 
                 </form>
             </div>
-        
+
     </div>
 </div>
 

@@ -4,7 +4,7 @@
 @section('sectionMain')
 
 {{-- @dump($errors->all()) --}}
-@dump($errors->all())
+
 <div class="container">
     <div class="row ">
             <h2 class="fw-bold text-center">Editar PRODUCTO {{$product->name_product}}</h2><br><br>

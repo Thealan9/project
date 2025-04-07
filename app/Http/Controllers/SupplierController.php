@@ -32,7 +32,7 @@ class SupplierController extends Controller
      */
     public function store(Request $request)
     {
-        
+
 
       $data= $request->all(); // guardamos todos los datos en una variable para manipularlos
 
@@ -70,7 +70,7 @@ class SupplierController extends Controller
         ]);
 
         $data= $request->all(); // guardamos todos los datos en una variable para manipularlos
-  
+
         $supplier->update($data); //Actualizar en la base de datos a través del modelo.
         return to_route('suppliers.index')->with('status','Proveedor Actualizado');
     }

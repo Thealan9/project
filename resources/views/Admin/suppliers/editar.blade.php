@@ -35,21 +35,27 @@
 <body>
 
     <div class="container text-center">
-        <h2 class="fw-bold">EDITAR PROVEEDOR</h2>
+        <h2 class="fw-bold">EDITAR PROVEEDOR {{ $supplier->name_supplier }}</h2>
         <form action="{{ route('suppliers.update', $supplier) }}" method="POST">
             @csrf
             @method('patch')
             <div class="mb-3 text-start">
                 <label for="nombre" class="form-label fw-bold">NOMBRE</label>
-                <input type="text" class="form-control" id="nombre" name="name_supplier" required>
+                <input type="text" class="form-control @error('name_supplier') border-danger @enderror"
+                name="name_supplier" value="{{$supplier->name_supplier}}" required>
+                @error('name_supplier') @include('fragments.errorsv')@enderror
             </div>
             <div class="mb-3 text-start">
                 <label for="correo" class="form-label fw-bold">CORREO ELECTRÓNICO</label>
-                <input type="email" class="form-control" id="correo" name="email" required>
+                <input type="email" class="form-control @error('email') border-danger @enderror"
+                name="email" value="{{$supplier->email}}"required>
+                @error('email') @include('fragments.errorsv')@enderror
             </div>
             <div class="mb-3 text-start">
                 <label for="telefono" class="form-label fw-bold">TELÉFONO</label>
-                <input type="text" class="form-control" id="telefono" name="phone_supplier" required>
+                <input type="text" class="form-control @error('phone_supplier') border-danger @enderror"
+                name="phone_supplier" value="{{$supplier->phone_supplier}}" required>
+                @error('phone_supplier') @include('fragments.errorsv')@enderror
             </div>
             <div class="d-flex justify-content-center gap-3">
                 <button type="submit" class="btn btn-custom-green fw-bold">EDITAR</button>
